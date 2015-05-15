@@ -1,6 +1,6 @@
 services:
   nodejs:
-    from: google/nodejs
+    from: 'node:0.12.2'
 
 staging:
   service: nodejs
