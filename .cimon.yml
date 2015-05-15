@@ -1,0 +1,11 @@
+services:
+  nodejs:
+    from: google/nodejs
+
+staging:
+  service: nodejs
+  folder: /app
+  port: 5000
+  cmd: npm start
+  env:
+    - NODE_ENV=production
