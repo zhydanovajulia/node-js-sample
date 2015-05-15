@@ -3,6 +3,8 @@ services:
     from: 'node:0.12.2'
 
 staging:
+  prepare:
+    - npm install
   service: nodejs
   folder: /app
   port: 5000
