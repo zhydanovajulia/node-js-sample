@@ -11,3 +11,12 @@ staging:
   cmd: npm start
   env:
     - NODE_ENV=production
+
+tests:
+  prepare:
+    - npm install
+  service: nodejs
+  folder: /app
+  cmd: for i in {1..10}; do echo -n "."; sleep 1; done; echo -n "\n"
+  env:
+    - NODE_ENV=production
